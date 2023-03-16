@@ -6,7 +6,6 @@ export const registerUser = async (req, res, next) => {
     const { email, password, role } = req.body;
 
     try {
-
         const emailExists = await User.findOne({ email: email });
 
         if (emailExists) {

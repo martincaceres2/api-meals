@@ -1,10 +1,8 @@
 import { body } from "express-validator";
-import { validRole } from "../helpers/db-validators.js";
 
 export const registerValidator = [
     body('email', 'Enter a valid email').isEmail().notEmpty().isLength({ min: 7 }),
-    body('password', 'Enter a valid password').notEmpty().isLength({ min: 6 }),
-    body('role', 'Enter a valid role').custom(validRole)
+    body('password', 'Enter a valid password').notEmpty().isLength({ min: 6 })
 ];
 
 export const loginValidator = [

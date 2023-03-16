@@ -62,5 +62,4 @@ app.use((err, req, res, next) => {
     res.json({ error: err });
 });
 
-
 export default app;

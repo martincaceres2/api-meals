@@ -18,7 +18,6 @@ export const getUsers = async (req, res) => {
 export const getSingleUser = async (req, res, next) => {
 
     try {
-
         const { id } = req.params
 
         const user = await User.findOne({ _id: id });
