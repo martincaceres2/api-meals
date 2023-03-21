@@ -11,13 +11,11 @@ export const loginValidator = [
 ];
 
 export const mealsBody = [
-    body('name', 'Name is required').isString().trim().notEmpty().escape(),
+    body('name', 'You must insert a name').isString().trim().notEmpty().escape(),
     body('description', 'You must add a description').isString().trim().notEmpty().escape().isLength({ min: 5 }),
-    body('category', 'Category is required').trim().notEmpty().escape().isLength({ min: 5 }),
-    body('subCategory', 'Sub category is required').trim().notEmpty().escape().isLength({ min: 5 })
+    body('category', 'You must insert a category').trim().notEmpty().escape().isLength({ min: 5 })
 ];
 
 export const categoriesBody = [
-    body('name', 'Name is required').isString().trim().notEmpty().escape(),
-    body('subCategory', 'Sub category is required').trim().notEmpty().escape().isLength({ min: 5 })
+    body('name', 'You must insert a name').isString().trim().notEmpty().escape(),
 ];
